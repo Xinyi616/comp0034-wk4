@@ -1,6 +1,6 @@
 blinker==1.7.0
 click==8.1.7
--e git+https://github.com/Xinyi616/comp0034-wk4.git@4b7b738cd1ae08cec2cfe660b4fea86ef93626c8#egg=comp0034_wk4
+-e git+https://github.com/Xinyi616/comp0034-wk4.git@ca27c3df5e32433d436dd9359130f9900d76a9bd#egg=comp0034_wk4
 coverage==7.4.1
 Flask==3.0.2
 flask-marshmallow==1.1.0

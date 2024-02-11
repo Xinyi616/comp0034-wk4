@@ -87,7 +87,7 @@ def test_patch_region(client, new_region):
     new_region_notes = {'notes': 'An updated note'}
     code = new_region['NOC']
     response = client.patch(f"/regions/{code}", json=new_region_notes)
-    assert response.json['message'] == 'Region NEW updated.'
+    assert response.json['message'] == 'Region NEW updated'
     assert response.status_code == 200
 
 def test_delete_region(client, new_region):
@@ -99,8 +99,8 @@ def test_delete_region(client, new_region):
     AND the response content should include the message 'Region {noc_code} deleted.'
     """
     # Get the NOC code from the JSON which is returned in the new_region fixture
-    code = new_region.NOC  # Access the NOC attribute directly
+    code = new_region['NOC']  # Access the NOC attribute directly
     response = client.delete(f"/regions/{code}")
     assert response.status_code == 200
-    assert response.json['message'] == 'Region NEW updated.'
+    assert response.json['message'] == 'Region NEW deleted'
     
